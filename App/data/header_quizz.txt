@@ -1,0 +1,185 @@
+
+Host: awa-quizz.herokuapp.com/api/quizzes
+quizz-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6Imd1ZXN0IiwicGFzc3dvcmQiOiIkcGJrZGYyLXNoYTI1NiQyMDAwMCRjNjRWd3RnN0IuQThKeVJrN1AzL1h3JG9BRDloUnVEQTVkWVpKR1Y2cDNpdDBzYVFqdlFBemFZbi9wNW1kSGRDbDQifQ.P-KfTO8nq5oQNC_bIAY5VKOeNLyNbGE-gGrf0oIKQjc
+
+--------------------------------------------------------------------------------------
+
+{
+    "quizzes": [
+        {
+            "title": "Quizz Géométrie",
+            "image": "https://d1whtlypfis84e.cloudfront.net/guides/wp-content/uploads/2018/03/01075158/p2.png",
+            "description": "Questions sur les formes et volumes",
+            "created_by": {
+                "id": "5c3ef507ae97ab0004daad7c",
+                "username": "amr"
+            },
+            "number_participants": 0,
+            "id": "5c3f45e155a8180004b47aea"
+        },
+        {
+            "title": "Quizz Web Bases",
+            "image": "http://managedsolution.com/wp-content/uploads/2015/12/web-development-managed-solution.jpg",
+            "description": "Questions de base sur le développement web",
+            "created_by": {
+                "id": "5c3ef507ae97ab0004daad7c",
+                "username": "amr"
+            },
+            "number_participants": 2,
+            "id": "5c4592fb28a39b00045f1945"
+        }
+    ]
+}
+
+
+
+--------------------------------------------------------------------------------------
+
+https://awa-quizz.herokuapp.com/api/quizzes/5c3f45e155a8180004b47aea
+
+--------------------------------------------------------------------------------------
+{
+    "id": "5c3f45e155a8180004b47aea",
+    "title": "Quizz Géométrie",
+    "description": "Questions sur les formes et volumes",
+    "created_by": "amr",
+    "questions": [
+        {
+            "id": "5c3f0c696f912a0004c01251",
+            "question": "Combien de côtés possède un cube",
+            "image": "test.png",
+            "answers": [
+                {
+                    "name": "Quatre",
+                    "value": "false"
+                },
+                {
+                    "name": "Six",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "id": "5c3f0c346f912a0004c01250",
+            "question": "Combien de côtés possède une pyramide",
+            "image": "test.png",
+            "answers": [
+                {
+                    "name": "Quatre",
+                    "value": "true"
+                },
+                {
+                    "name": "Cinq",
+                    "value": "false"
+                },
+                {
+                    "name": "Six",
+                    "value": "false"
+                },
+                {
+                    "name": "Sept",
+                    "value": "false"
+                }
+            ]
+        },
+        {
+            "id": "5c3f0bd46f912a0004c0124e",
+            "question": "Combien de sommets possède un dodecaèdre",
+            "image": "test.png",
+            "answers": [
+                {
+                    "name": "12",
+                    "value": "false"
+                },
+                {
+                    "name": "18",
+                    "value": "false"
+                },
+                {
+                    "name": "20",
+                    "value": "true"
+                },
+                {
+                    "name": "24",
+                    "value": "false"
+                }
+            ]
+        },
+        {
+            "id": "5c3f0be56f912a0004c0124f",
+            "question": "Combien de sommets possède un cube",
+            "image": "test.png",
+            "answers": [
+                {
+                    "name": "4",
+                    "value": "false"
+                },
+                {
+                    "name": "6",
+                    "value": "false"
+                },
+                {
+                    "name": "8",
+                    "value": "true"
+                },
+                {
+                    "name": "12",
+                    "value": "false"
+                }
+            ]
+        }
+    ],
+    "number_participants": 0
+}
+
+
+
+--------------------------------------------------------------------------------------
+
+https://awa-quizz.herokuapp.com/api/quizzes/5c4592fb28a39b00045f1945
+
+--------------------------------------------------------------------------------------
+
+{
+    "id": "5c4592fb28a39b00045f1945",
+    "title": "Quizz Web Bases",
+    "description": "Questions de base sur le développement web",
+    "created_by": "amr",
+    "questions": [
+        {
+            "id": "5c45922628a39b00045f1944",
+            "question": "CSS est l'abréviation de Computed Style Sheets",
+            "image": "test.png",
+            "answers": [
+                {
+                    "name": "vrai",
+                    "value": "false"
+                },
+                {
+                    "name": "faux",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "id": "5c45911328a39b00045f1943",
+            "question": "Quelle est l'extension de fichier de type image ?",
+            "image": "test.png",
+            "answers": [
+                {
+                    "name": "xls",
+                    "value": "false"
+                },
+                {
+                    "name": "png",
+                    "value": "true"
+                },
+                {
+                    "name": "zip",
+                    "value": "false"
+                }
+            ]
+        }
+    ],
+    "number_participants": 2
+}
