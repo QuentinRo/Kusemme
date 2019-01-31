@@ -1,0 +1,106 @@
+{
+  "quizzs": [
+    {
+      "title": "Quizz Géométrie",
+      "image": "https://d1whtlypfis84e.cloudfront.net/guides/wp-content/uploads/2018/03/01075158/p2.png",
+      "description": "Questions sur les formes et volumes",
+      "created_by": {
+        "id": "5c3ef507ae97ab0004daad7c",
+        "username": "amr"
+      },
+      "questions": [
+        {
+          "id": "5c3f0c696f912a0004c01251",
+          "question": "Combien de côtés possède un cube",
+          "image": "test.png",
+          "answers": [
+            {
+              "name": "Quatre",
+              "value": "false"
+            },
+            {
+              "name": "Six",
+              "value": "true"
+            }
+          ]
+        },
+        {
+          "id": "5c3f0c346f912a0004c01250",
+          "question": "Combien de côtés possède une pyramide",
+          "image": "test.png",
+          "answers": [
+            {
+              "name": "Quatre",
+              "value": "true"
+            },
+            {
+              "name": "Cinq",
+              "value": "false"
+            },
+            {
+              "name": "Six",
+              "value": "false"
+            },
+            {
+              "name": "Sept",
+              "value": "false"
+            }
+          ]
+        }],
+      "number_participants": 0,
+      "id": "5c3f45e155a8180004b47aea"
+    },
+    {
+      "title": "Quizz Web Bases",
+      "image": "http://managedsolution.com/wp-content/uploads/2015/12/web-development-managed-solution.jpg",
+      "description": "Questions de base sur le développement web",
+      "created_by": {
+        "id": "5c3ef507ae97ab0004daad7c",
+        "username": "amr"
+      },
+      "questions": [
+        {
+          "id": "5c3f0c696f912a0004c01251",
+          "question": "Combien de côtés possède un cube",
+          "image": "test.png",
+          "answers": [
+            {
+              "name": "Quatre",
+              "value": "false"
+            },
+            {
+              "name": "Six",
+              "value": "true"
+            }
+          ]
+        },
+        {
+          "id": "5c3f0c346f912a0004c01250",
+          "question": "Combien de côtés possède une pyramide",
+          "image": "test.png",
+          "answers": [
+            {
+              "name": "Quatre",
+              "value": "true"
+            },
+            {
+              "name": "Cinq",
+              "value": "false"
+            },
+            {
+              "name": "Six",
+              "value": "false"
+            },
+            {
+              "name": "Sept",
+              "value": "false"
+            }
+          ]
+        }],
+      "number_participants": 2,
+      "id": "5c4592fb28a39b00045f1945"
+    }
+  ]
+}
+
+
