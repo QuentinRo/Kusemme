@@ -1,16 +1,21 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
 
-      <div>
-          <ul>
-            <li class="men-itm" v-for="item in items.quizzs" @click="setQuizz(item.id)">{{item.title}}</li>
-          </ul>
-          <router-link v-for="item in items.quizzs"  :to="'/quizz/'+ item.id"><button type="button" class="btn btn-primary">quizo</button></router-link>
-          <!--  <div v-for="quiz of datas.quizzes" :key="quiz.id" class="col-lg-3 col-md-4 col-sm-6 portfolio-item"> -->
-      </div>
+    <div id="quizz_all">
 
-  </div>
+        <div class="row">
+            <div class="col s12"><h3>Séléctionner un quizz</h3></div>
+            <div class="col s12 m4" v-for="item in items.quizzs">
+                <div class="card-panel teal orange lighten-1">
+	        <span class="white-text">{{item.title}}
+	        </span>
+                    <router-link :to="'/quizz/'+ item.id"><a href="play.html" class="waves-effect waves-light btn blue-grey lighten-4">Jouer !</a></router-link>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
 </template>
 
 <script>
