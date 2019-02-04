@@ -2,19 +2,15 @@
     <div class="hello">
 
 
-
-        <div v-for="(quiz, index) of items.quizzs"  style="display:flex" :key="quiz.id">
+        <div class="row">
+        <div class="col s12" v-for="(quiz, index) of items.quizzs"  style="display:flex" :key="quiz.id">
             <div v-if="quiz.id == $route.params.id" style="text-align:center">
-                {{quiz.title}}
-                {{quiz.questions[1].question}}
-                {{quiz.questions[1].answers[1].name}}
+                <div ><h3>{{quiz.title}}</h3></div>
                 {{WichQuizz(index)}}
             </div>
         </div>
 
 
-<!-- <a href="#!" class="collection-item" onclick="this.classList.toggle('active');">{{item.name}}</a> -->
-        <div class="row">
             <div class="col s12 m4 l2"></div>
             <div class="col s12 m4 l8">
                 <div class="quizz">
@@ -23,25 +19,15 @@
                     <li class="collection-header" v-for="(item, index) in this.items.quizzs[this.quizindex].questions[this.currentQuestion].answers">
                         <p>
                             <label>
-                                <input name="group1" :id="index" type="radio" :value="item.name" v-model="picked"/>
+                                <input name="group1" :id="index" type="radio" :value="item.name"  v-on:click="next(index)"/>
                                 <span :id="index">{{item.name}}</span>
-
                             </label>
-
                         </p>
-
                     </li>
                 </ul>
-                    <span>Choisi : {{ picked }}</span>
             </div>
-                <button v-on:click="next">
-                    Suivant{{picked}}
-                </button>
             </div>
-
         </div>
-
-
         <div class="questions" v-show="end">
             vous avez {{this.correct}} reponse juste
         </div>
@@ -72,24 +58,19 @@ export default {
         WichQuizz: function(index){
             this.quizindex = index;
         },
-        //Method to go on the next question
-        nextquestion: function(index){
-            //Scoring
-            if(this.items.quizzs[this.quizindex].questions[this.currentQuestion].answers[index].value == 'true'){
+        // Go to next question
+        next: function(index) {
+            if (this.items.quizzs[this.quizindex].questions[this.currentQuestion].answers[index].value == 'true')
+            {
                 this.correct++
             }
-            //Check if it's the last question or not
-            if(this.currentQuestion == this.items.quizzs[this.quizindex].questions.length - 1) {
+            if(this.items.quizzs[this.quizindex].questions.length -1 == this.currentQuestion )
+            {
                 this.end = true;
-            } else {
-                this.currentQuestion++
+            }else {
+                this.currentQuestion++;
             }
-        },
-        // Go to next question
-        next: function() {
-            this.currentQuestion++;
         }
-
     }
 }
 </script>
