@@ -11,7 +11,7 @@
                         {{WichQuizz(index)}}
                     </li>
                         <div v-for="(answer, index) in item.answers">
-                            <li> <a href="#!" class="collection-item" onclick="this.classList.toggle('active');" v-on:click="nextquestion(index)">{{answer.name}}</a></li>
+                        <li> <a href="#!" class="collection-item" onclick="this.classList.toggle('active');" v-on:click="nextquestion(index)">{{answer.name}}</a></li>
                         </div>
                 </ul>
 
