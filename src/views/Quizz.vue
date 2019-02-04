@@ -1,23 +1,46 @@
 <template>
     <div class="hello">
 
+
+
+        <div v-for="(quiz, index) of items.quizzs"  style="display:flex" :key="quiz.id">
+            <div v-if="quiz.id == $route.params.id" style="text-align:center">
+                {{quiz.title}}
+                {{quiz.questions[1].question}}
+                {{quiz.questions[1].answers[1].name}}
+                {{WichQuizz(index)}}
+            </div>
+        </div>
+
+
+<!-- <a href="#!" class="collection-item" onclick="this.classList.toggle('active');">{{item.name}}</a> -->
         <div class="row">
             <div class="col s12 m4 l2"></div>
             <div class="col s12 m4 l8">
-                <div class="quizz" v-for="(item, index) in this.items.quizzs[this.quizindex].questions">
+                <div class="quizz">
                 <ul class="collection with-header" >
-                    <li class="collection-header"  style="text-align:center">
-                    {{item.question}}
-                        {{WichQuizz(index)}}
-                    </li>
-                        <div v-for="(answer, index) in item.answers">
-                        <li> <a href="#!" class="collection-item" onclick="this.classList.toggle('active');" v-on:click="nextquestion(index)">{{answer.name}}</a></li>
-                        </div>
-                </ul>
+                    <li class="collection-header"><h4>{{this.items.quizzs[this.quizindex].questions[this.currentQuestion].question}}</h4></li>
+                    <li class="collection-header" v-for="(item, index) in this.items.quizzs[this.quizindex].questions[this.currentQuestion].answers">
+                        <p>
+                            <label>
+                                <input name="group1" :id="index" type="radio" :value="item.name" v-model="picked"/>
+                                <span :id="index">{{item.name}}</span>
 
+                            </label>
+
+                        </p>
+
+                    </li>
+                </ul>
+                    <span>Choisi : {{ picked }}</span>
             </div>
+                <button v-on:click="next">
+                    Suivant{{picked}}
+                </button>
             </div>
+
         </div>
+
 
         <div class="questions" v-show="end">
             vous avez {{this.correct}} reponse juste
@@ -41,6 +64,7 @@ export default {
             question: null,
             quizindex: 0,
             currentQuestion: 0,
+            picked: '',
             correct: 0,
             end: false
         }
@@ -60,7 +84,12 @@ export default {
             } else {
                 this.currentQuestion++
             }
+        },
+        // Go to next question
+        next: function() {
+            this.currentQuestion++;
         }
+
     }
 }
 </script>
