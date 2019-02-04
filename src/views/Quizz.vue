@@ -8,10 +8,10 @@
                 <ul class="collection with-header" >
                     <li class="collection-header"  style="text-align:center">
                     {{item.question}}
-                    {{WichQuizz(1)}}
+                        {{WichQuizz(index)}}
                     </li>
                         <div v-for="(answer, index) in item.answers">
-                        <li> <a href="#!" class="collection-item" onclick="this.classList.toggle('active');" v-on:click="nextquestion(index)">{{answer.name}}</a></li>
+                            <li> <a href="#!" class="collection-item" onclick="this.classList.toggle('active');" v-on:click="nextquestion(index)">{{answer.name}}</a></li>
                         </div>
                 </ul>
 
@@ -47,7 +47,6 @@ export default {
     }, methods: {
         WichQuizz: function(index){
             this.quizindex = index;
-            console.log(this.quizindex);
         },
         //Method to go on the next question
         nextquestion: function(index){
